@@ -1,64 +1,64 @@
 <?php
- session_start();
- $_SESSION['arr'] = array();
+    session_start();
+    //global var
+    $_SESSION['arr'] = array();
 ?>
- <html>
-<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>PIP_Lab_1</title>
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta charset="utf-8">
+    <title>PIP_Lab_1</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
-  <script type="text/javascript">
+    <script type="text/javascript">
     function validate(_form){
 
-      var fail = false;
-      var Y = _form.Y.value;
-      var R = _form.R.value;
-      var regexp = /^-?[0-9]\d*(\.\d+)?/;
+        var fail = false;
+        var Y = _form.Y.value;
+        var R = _form.R.value;
+        var regexp = /^-?[0-9]\d*(\.\d+)?/;
 
-      if (Y <= -3 || Y >= 3 || !regexp.test(Y)){
-        fail = "Некорректно задано значение Y \n";
-      }
-      if (R <= 0 || R >= 4 || !regexp.test(R)){
-        if (!fail) fail = "";
-        fail += "Некорректно задано значение R";
-      }
+        if (Y <= -3 || Y >= 3 || !regexp.test(Y)){
+            fail = "Некорректно задано значение Y \n";
+        }
+        if (R <= 0 || R >= 4 || !regexp.test(R)){
+            if (!fail) fail = "";
+            fail += "Некорректно задано значение R";
+        }
 
-      if (fail){
-        alert(fail);
-        return false;
-      }
-      else{
-        return true;
-      }
+        if (fail){
+            alert(fail);
+            return false;
+        }
+        else{
+            return true;
+        }
 
-  }
-  </script>
+    }
+    </script>
 </head>
 
 <body >
   <center>
 
+      <div class="container header">
+          <span class="left">Гр. P3210</span>
+          <span class="center">Заводов Андрей / Черных Дмитрий</span>
+          <span class="right">Вар. 1000</span>
+      </div>
 
-  <div class="container header">
-    <span class="left">Гр. P3210</span>
-    <span class="center">Заводов Андрей / Черных Дмитрий</span>
-    <span class="right">Вар. 1000</span>
-  </div>
+      <div class="container task">
+          <img class="task_image" src="img/task.png" alt="task_picture">
+          <img class="task_text" src="img/task_text.png" alt="task_text">
+      </div>
 
-    <div class="container task">
-      <img class="task_image" src="img/task.png" alt="task_picture">
-      <img class="task_text" src="img/task_text.png" alt="task_text">
-    </div>
+      <div class="container form">
+          <form class="form" action="checkPoints.php" method="get" onsubmit="return validate(this)" target="_blank">
 
-    <div class="container form">
-      <form class="form" action="checkPoints.php" method="get" onsubmit="return validate(this)" target="_blank">
-
-        <table>
+              <table>
         				<tr>
                   <td></td>
         					<td><input type="radio" id="-4" name="X" value="-4">-4</td>
