@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <script type="text/javascript">
+
     function validate(_form){
 
         var fail = false;
@@ -38,7 +39,13 @@
         }
 
     }
+
+    function showFrame(id){
+        var iframe = document.getElementById(id);
+        iframe.style.display="block";
+    }
     </script>
+
 </head>
 
 <body >
@@ -56,7 +63,7 @@
       </div>
 
       <div class="container form">
-          <form class="form" action="checkPoints.php" method="get" onsubmit="return validate(this)" target="result_frame">
+          <form class="form" action="checkPoints.php" method="get" onsubmit="showFrame('result_frame');return validate(this);" target="result_frame">
 
               <table>
         				<tr>
@@ -87,12 +94,13 @@
 
         <input class="submit" type="submit" name="submit" value=" ПРОВЕРИТЬ ">
       </form>
-      <!--<div class="answer">some answer</div>-->
 
     </div>
 
-    <div>
-        <iframe name="result_frame" srt="#"></iframe>
+    <!--result_frame-->
+
+    <div >
+        <iframe name="result_frame" height="333" width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="yes" seamless style="display:none"></iframe>
     </div>
 
 
