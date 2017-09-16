@@ -29,18 +29,17 @@
               <link rel='shortcut icon' href='img/favicon.ico'>
               <link rel='stylesheet' type='text/css' href='css/main.css'>
             </head> <body> <center>";
-      echo "<div class='container header'><span class='left'>Гр. P3210</span>
-            <span class='center'>Заводов Андрей / Черных Дмитрий</span><span class='right'>Вар. 1000</span></div>";
-      echo "<div class='container task'><img class='task_image' src='img/task.png' alt='task_picture'>
-            <img class='task_text' src='img/task_text.png' alt='task_text'></div>";
-
+      /*echo "<div class='container header'><span class='left'>Гр. P3210</span>
+            <span class='center'>Заводов Андрей / Черных Дмитрий</span><span class='right'>Вар. 1000</span></div>";*/
+      /*echo "<div class='container task'><img class='task_image' src='img/task.png' alt='task_picture'>
+            <img class='task_text' src='img/task_text.png' alt='task_text'></div>";*/
       echo "<div class='container' style='padding:20px 0px;'> <table class='points'>
               <tr>  <td>X</td> <td>Y</td> <td>R</td> <td>CHECK</td>  </tr> ";
         foreach ($_SESSION['arr'] as $item) {
           	echo $item;
 
-        } 
-	
+        }
+
       echo "</table> <br>";
 
       echo "<a href='index.php'><button class='submit'>close</button></a><br><br>";
@@ -53,10 +52,9 @@
         echo "( SCRIPT TIME - $time sec. ) </div>";
 	//check
 
-      echo "<div class='container footer'><span class='left'><a href='https://se.ifmo.ru/'>
+      /*echo "<div class='container footer'><span class='left'><a href='https://se.ifmo.ru/'>
             <img id='VT_logo' src='img/vt_logo.png' width='50' height='50' alt='logo'></a>
-            </span><span class='center'>ПИП 2017 г.</span><span class='right'>Е. Цопа</span></div>";
-
+            </span><span class='center'>ПИП 2017 г.</span><span class='right'>Е. Цопа</span></div>";*/
       echo "</center> </body>";
 
 ?>

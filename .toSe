@@ -1,0 +1,2 @@
+#!/bin/bash
+scp -r -P 2222 ./* s223859@helios.cs.ifmo.ru:/home/s223859/public_html/
