@@ -56,7 +56,7 @@
       </div>
 
       <div class="container form">
-          <form class="form" action="checkPoints.php" method="get" onsubmit="return validate(this)" target="_blank">
+          <form class="form" action="checkPoints.php" method="get" onsubmit="return validate(this)" target="result_frame">
 
               <table>
         				<tr>
@@ -77,7 +77,7 @@
         					<td><input type="radio" id="3" name="X" value="3">3</td>
         					<td><input type="radio" id="4" name="X" value="4">4</td>
         				</tr>
-        </table>
+              </table>
 
         <label for="Y"> Y = </label>
         <input class="input_Y" id="Y" type="text" name="Y" placeholder="(-3 .. 3)"><br>
@@ -89,6 +89,10 @@
       </form>
       <!--<div class="answer">some answer</div>-->
 
+    </div>
+
+    <div>
+        <iframe name="result_frame" srt="#"></iframe>
     </div>
 
 
