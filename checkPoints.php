@@ -42,7 +42,7 @@
 
       echo "</table> <br>";
 
-      echo "<a href='index.php'><button class='submit'>close</button></a><br><br>";
+//    echo "<a href='index.php'><button class='submit'>close</button></a><br><br>";
       echo "( CURRENT TIME - $currentTime ) <br>";
 
       $time = round(microtime(true) - $start, 4);
