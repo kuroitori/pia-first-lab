@@ -1,7 +1,8 @@
 <?php
     session_start();
-    //global var
+    //global vars
     $_SESSION['arr'] = array();
+    $_SESSION['frameHeigth'] = 180;
 ?>
 <html>
     <!DOCTYPE html>
@@ -100,7 +101,7 @@
     <!--result_frame-->
 
     <div >
-        <iframe name="result_frame" height="180" width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="no" seamless style="display:none"></iframe>
+        <iframe name="result_frame" height=<?php echo $_SESSION['frameHeigth']?> width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="no" seamless style="display:none"></iframe>
     </div>
 
 

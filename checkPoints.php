@@ -1,7 +1,7 @@
 <?php
     @session_start();
     $start = microtime(true);
-
+    //$_SESSION['frameHeigth'] += 39;
     $x = $_GET["X"];
     $y = $_GET["Y"];
     $r = $_GET["R"];
@@ -42,5 +42,4 @@
         echo "( SCRIPT TIME - $time sec. ) </div>";
 
       echo "</center> </body>";
-
 ?>
