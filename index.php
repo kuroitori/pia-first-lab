@@ -40,7 +40,7 @@
 
     }
 
-    function showFrame(id){
+    function makeFrame(id){
         var iframe = document.getElementById(id);
         iframe.style.display="block";
     }
@@ -63,7 +63,7 @@
       </div>
 
       <div class="container form">
-          <form class="form" action="checkPoints.php" method="get" onsubmit="showFrame('result_frame');return validate(this);" target="result_frame">
+          <form class="form" action="checkPoints.php" method="get" onsubmit="makeFrame('result_frame');return validate(this);" target="result_frame">
 
               <table>
         				<tr>
@@ -100,7 +100,7 @@
     <!--result_frame-->
 
     <div >
-        <iframe name="result_frame" height="333" width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="yes" seamless style="display:none"></iframe>
+        <iframe name="result_frame" height="180" width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="no" seamless style="display:none"></iframe>
     </div>
 
 
