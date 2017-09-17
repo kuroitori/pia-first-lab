@@ -2,7 +2,6 @@
     session_start();
     //global vars
     $_SESSION['arr'] = array();
-    $_SESSION['frameHeigth'] = 180;
 ?>
 <html>
     <!DOCTYPE html>
@@ -44,6 +43,19 @@
     function makeFrame(id){
         var iframe = document.getElementById(id);
         iframe.style.display="block";
+        frameFitting(id);
+        for (var i=0; i<iframe.length; i++) {
+        iframe[i].onclick = function() {
+            clearInterval(timeout);
+            timeout = setInterval("frameFitting(id)",100);
+        }
+    }
+
+    function frameFitting(id) {
+        document.getElementById(id).width = '100%';
+        document.getElementById(id).height = document.getElementById(id).contentWindow.document.body.scrollHeight+18+'px';
+    }
+
     }
     </script>
 
@@ -101,7 +113,7 @@
     <!--result_frame-->
 
     <div >
-        <iframe name="result_frame" height=<?php echo $_SESSION['frameHeigth']?> width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="no" seamless style="display:none"></iframe>
+        <iframe name="result_frame" height="180" width="822" id="result_frame" allowtransparenc frameborder="no" scrolling="no" seamless style="display:none"></iframe>
     </div>
 
 
