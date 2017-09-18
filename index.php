@@ -15,6 +15,8 @@
 
     <script type="text/javascript">
 
+    var timeout;
+
     function validate(_form){
 
         var fail = false;
@@ -71,7 +73,7 @@
       </div>
 
       <div class="container task">
-          <img class="task_image" src="img/task.png" alt="task_picture">
+          <img class="task_image" src="img/canvas.png" alt="task_picture">
           <img class="task_text" src="img/task_text.png" alt="task_text">
       </div>
 
@@ -106,6 +108,14 @@
         <input class="input_R" id="R" type="text" name="R" placeholder="(-1 .. 4)"><br>
 
         <input class="submit" type="submit" name="submit" value=" ПРОВЕРИТЬ ">
+
+        <input  name="range" id="range" type="range" min="1" max="4" step="1" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+        <datalist id="rangeList">
+            <option value="1" label="1">
+            <option value="2" label="2">
+            <option value="3" label="3">
+            <option value="4" label="4">
+        </datalist>
       </form>
 
     </div>
